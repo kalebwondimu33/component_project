@@ -1,0 +1,15 @@
+{
+  "name": "task-manager",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "cd apps/web && npm run build",
+    "dev": "cd apps/web && npm run dev",
+    "setup": "npm install && cd packages/ui && npm install && cd ../../apps/web && npm install",
+    "lint": "cd apps/web && npm run lint",
+    "clean": "rimraf node_modules && cd packages/ui && rimraf node_modules && cd ../../apps/web && rimraf node_modules"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.0"
+  }
+}
