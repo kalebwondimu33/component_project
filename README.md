@@ -49,13 +49,13 @@ task-manager/
 
 ```bash
 cd task-manager
-pnpm install
+npm install
 ```
 
 3. Start the development server:
 
 ```bash
-pnpm dev
+npm dev
 ```
 
 4. Open your browser and navigate to `http://localhost:3000`
@@ -71,7 +71,7 @@ pnpm dev
 ### Building all packages
 
 ```bash
-pnpm build
+npm build
 ```
 
 ## License
