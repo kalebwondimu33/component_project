@@ -26,7 +26,11 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "../../packages/ui/src/components/TimeEntryList.tsx",
+    "../../packages/ui/src/components/TimerControls.tsx",
+    "../../packages/ui/src/components/TimerDisplay.tsx",
+    "../../packages/ui/src/components/TimeTracker.tsx"
   ],
   "exclude": [
     "node_modules"

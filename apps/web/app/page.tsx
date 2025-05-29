@@ -75,8 +75,8 @@ export default function Home() {
     setActiveTab(value as TaskStatus | "all");
   };
 
-  const filteredTasks = activeTab === "all" 
-    ? tasks 
+  const filteredTasks = activeTab === "all"
+    ? tasks
     : getTasksByStatus(activeTab as TaskStatus);
 
   return (

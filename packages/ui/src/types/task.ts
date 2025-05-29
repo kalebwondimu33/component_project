@@ -4,26 +4,26 @@ export type TaskStatus = 'todo' | 'in-progress' | 'completed';
 export interface Task {
   id: string;
   title: string;
-  description: string;
-  priority: TaskPriority;
+  description?: string;
   status: TaskStatus;
-  dueDate: string | null;
-  createdAt: string;
-  updatedAt: string;
+  priority: TaskPriority;
+  dueDate?: Date;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export interface CreateTaskInput {
   title: string;
-  description: string;
+  description?: string;
   priority: TaskPriority;
-  dueDate?: string | null;
+  dueDate?: Date;
 }
 
 export interface UpdateTaskInput {
   id: string;
   title?: string;
   description?: string;
-  priority?: TaskPriority;
   status?: TaskStatus;
-  dueDate?: string | null;
+  priority?: TaskPriority;
+  dueDate?: Date;
 }
