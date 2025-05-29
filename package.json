@@ -5,7 +5,7 @@
   "scripts": {
     "build": "cd apps/web && npm run build",
     "dev": "cd apps/web && npm run dev",
-    "setup": "npm install && cd packages/ui && npm install && cd ../../apps/web && npm install",
+    "setup": "npm install && cd packages/ui && npm install && cd ../../packages/utils && npm install && cd ../../packages/task-tracker && npm install && cd ../../packages/task-stats && npm install && cd ../../apps/web && npm install",
     "lint": "cd apps/web && npm run lint",
     "clean": "rimraf node_modules && cd packages/ui && rimraf node_modules && cd ../../apps/web && rimraf node_modules"
   },

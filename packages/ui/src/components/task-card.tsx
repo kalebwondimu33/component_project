@@ -22,7 +22,7 @@ const TrashIcon = () => (
   </svg>
 );
 import { formatDate } from "../utils/format-date";
-import { Task } from "../types/task";
+import { Task } from "../../../utils/types/task";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./card";
 import { PriorityBadge } from "./priority-badge";
 import { StatusBadge } from "./status-badge";
@@ -55,7 +55,7 @@ export function TaskCard({ task, onEdit, onDelete, onStatusChange }: TaskCardPro
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
           <CardTitle className="mr-2 break-words">{task.title}</CardTitle>
-          
+
           <DropdownMenu>
             <DropdownMenuTrigger>
               <Button variant="ghost" size="icon" className="h-8 w-8">
@@ -90,7 +90,7 @@ export function TaskCard({ task, onEdit, onDelete, onStatusChange }: TaskCardPro
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-        
+
         <CardDescription className="flex flex-wrap gap-2 mt-2">
           <PriorityBadge priority={task.priority} />
           <StatusBadge status={task.status} />
@@ -101,13 +101,13 @@ export function TaskCard({ task, onEdit, onDelete, onStatusChange }: TaskCardPro
           )}
         </CardDescription>
       </CardHeader>
-      
+
       <CardContent>
         <p className="text-sm text-slate-700 dark:text-slate-300 whitespace-pre-line">
           {task.description}
         </p>
       </CardContent>
-      
+
       <CardFooter className="flex justify-between text-xs text-slate-500 dark:text-slate-400">
         <span>Created: {formatDate(task.createdAt, 'MMM d, yyyy')}</span>
         {task.updatedAt !== task.createdAt && (

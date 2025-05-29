@@ -1,6 +1,6 @@
 import React from 'react';
 import { TimeEntry } from './time-tracker';
-import { Task } from '../../types/task';
+import { Task } from '../../../utils/types/task';
 
 export interface TimeEntryListProps {
     entries: TimeEntry[];

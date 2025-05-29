@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Task } from "../types/task";
+import { Task } from "../../../utils/types/task";
 import { TaskCard } from "./task-card";
 import { cn } from "../utils/cn";
 

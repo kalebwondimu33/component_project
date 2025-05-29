@@ -4,15 +4,15 @@ import React, { useState, useEffect } from 'react';
 import { TimerDisplay } from './timer-display';
 import { TimerControls } from './timer-controls';
 import { TimeEntryList } from './time-entry-list';
-import { useTasks } from '../../hooks/use-tasks';
+import { useTasks } from '../../../utils/src/hooks/use-tasks';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from '../select';
-import { Task } from '../../types/task';
+} from '../../../ui/src/components/select';
+import { Task } from '../../../utils/types/task';
 
 export interface TimeEntry {
     id: string;

@@ -25,8 +25,8 @@ export function Navigation() {
                         <Link
                             href="/"
                             className={`px-3 py-2 rounded-md text-sm font-medium ${isActive('/')
-                                    ? 'bg-gray-100 text-gray-900'
-                                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                ? 'bg-gray-100 text-gray-900'
+                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                 }`}
                         >
                             Tasks
@@ -34,11 +34,20 @@ export function Navigation() {
                         <Link
                             href="/time-tracker"
                             className={`px-3 py-2 rounded-md text-sm font-medium ${isActive('/time-tracker')
-                                    ? 'bg-gray-100 text-gray-900'
-                                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                ? 'bg-gray-100 text-gray-900'
+                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                 }`}
                         >
                             Time Tracker
+                        </Link>
+                        <Link
+                            href="/task-stats"
+                            className={`px-3 py-2 rounded-md text-sm font-medium ${isActive('/task-stats')
+                                ? 'bg-gray-100 text-gray-900'
+                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                }`}
+                        >
+                            Statistics
                         </Link>
                     </div>
                 </div>

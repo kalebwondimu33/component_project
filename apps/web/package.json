@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "ui": "file:../../packages/ui",
+    "task-tracker": "file:../../packages/task-tracker",
+    "task-stats": "file:../../packages/task-stats",
     "next": "^14.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

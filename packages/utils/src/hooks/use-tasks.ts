@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Task, CreateTaskInput, UpdateTaskInput, TaskStatus } from "../types/task";
+import { Task, CreateTaskInput, UpdateTaskInput, TaskStatus } from "../../types/task";
 
 // Function to generate a unique ID
 const generateId = (): string => {
@@ -38,7 +38,7 @@ export function useTasks() {
 
   // Create a new task
   const createTask = (input: CreateTaskInput): Task => {
-    const now = new Date().toISOString();
+    const now = new Date();
     const newTask: Task = {
       id: generateId(),
       title: input.title,
@@ -78,7 +78,7 @@ export function useTasks() {
   // Delete a task
   const deleteTask = (taskId: string): boolean => {
     let deleted = false;
-    
+
     setTasks((prevTasks) => {
       const filtered = prevTasks.filter((task) => task.id !== taskId);
       deleted = filtered.length < prevTasks.length;

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cn } from "../utils/cn";
-import { TaskStatus } from "../types/task";
+import { TaskStatus } from "../../../utils/types/task";
 
 interface StatusBadgeProps {
   status: TaskStatus;
@@ -24,7 +24,7 @@ const statusConfig: Record<TaskStatus, { color: string; label: string }> = {
 
 export function StatusBadge({ status, className }: StatusBadgeProps) {
   const config = statusConfig[status];
-  
+
   return (
     <span
       className={cn(

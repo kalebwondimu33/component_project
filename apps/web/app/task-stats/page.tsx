@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { TimeTracker } from 'task-tracker';
+import { TaskStatsPage } from 'task-stats';
 
 export default function TimeTrackerPage() {
     return (
-        <TimeTracker />
+        <TaskStatsPage />
     );
 } 

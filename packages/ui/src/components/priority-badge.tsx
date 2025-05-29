@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cn } from "../utils/cn";
-import { TaskPriority } from "../types/task";
+import { TaskPriority } from "../../../utils/types/task";
 
 interface PriorityBadgeProps {
   priority: TaskPriority;
@@ -24,7 +24,7 @@ const priorityConfig: Record<TaskPriority, { color: string; label: string }> = {
 
 export function PriorityBadge({ priority, className }: PriorityBadgeProps) {
   const config = priorityConfig[priority];
-  
+
   return (
     <span
       className={cn(
