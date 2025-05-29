@@ -2,31 +2,69 @@
 
 # Task Manager
 
-A beautiful component-based task management application built using a monorepo architecture. This project demonstrates how to create reusable UI components and consume them in a web application.
+A modern task management application built with Next.js, React, and TypeScript.
 
 ## Project Structure
 
-This project is organized as a monorepo using pnpm workspaces and Turborepo:
+This is a monorepo using pnpm workspaces with the following packages:
 
-```
-task-manager/
-├── apps/
-│   └── web/            # Next.js web application
-├── packages/
-│   └── ui/             # Reusable UI components
-├── package.json        # Root workspace configuration
-├── pnpm-workspace.yaml # Workspace definition
-└── turbo.json          # Turborepo configuration
+### Apps
+- `apps/web` - Next.js web application
+  - Main task management interface
+  - Time tracking functionality
+  - Task statistics and analytics
+
+### Packages
+- `packages/ui` - Shared UI components
+  - Button, Card, Dialog, and other base components
+  - Task-specific components (TaskCard, TaskList, TaskForm)
+  - Form components (Input, Select, DatePicker)
+  - Status and priority badges
+
+- `packages/task-tracker` - Time tracking functionality
+  - TimeEntry type definitions
+  - Timer components
+  - Time entry management
+
+- `packages/task-stats` - Task statistics and analytics
+  - Task statistics components
+  - Time tracking analytics
+  - Status distribution visualization
+
+- `packages/utils` - Shared utilities
+  - Task management hooks
+  - Common types
+  - Helper functions
+
+## Development
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+
+# Build all packages
+pnpm build
 ```
 
 ## Features
 
-- Create, read, update, and delete tasks
-- Categorize tasks by priority (low, medium, high)
-- Track task status (to do, in progress, completed)
-- Set due dates for tasks
-- Filter tasks by status
-- Responsive design for all device sizes
+- Task Management
+  - Create, edit, and delete tasks
+  - Set task priorities and status
+  - Filter tasks by status
+
+- Time Tracking
+  - Track time spent on tasks
+  - Start/stop timer
+  - View time entry history
+
+- Statistics
+  - Task status overview
+  - Time tracking metrics
+  - Status distribution visualization
 
 ## Technologies Used
 
@@ -61,20 +99,6 @@ npm dev
 ```
 
 4. Open your browser and navigate to `http://localhost:3000`
-
-## Development
-
-### Adding a new component
-
-1. Create a new component in the `packages/ui/src/components` directory
-2. Export it from `packages/ui/src/index.ts`
-3. Use it in your application
-
-### Building all packages
-
-```bash
-npm build
-```
 
 ## License
 
